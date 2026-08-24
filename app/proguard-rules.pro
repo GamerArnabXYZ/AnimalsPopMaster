@@ -24,4 +24,12 @@
 -keep class com.google.android.gms.ads.** { *; }
 
 # Natty Engine ke liye rules (Reflection issues se bachne ke liye)
--keep class com.github.nativegamestudio.nattyengine.** { *; }
+# NOTE: actual package "com.nativegame.nattyengine" hai (imports check kiye),
+# "com.github.nativegamestudio.nattyengine" wala pehle wala rule kabhi match hi
+# nahi karta tha -> minifyEnabled=true ke saath engine crash ka risk tha.
+-keep class com.nativegame.nattyengine.** { *; }
+-keep interface com.nativegame.nattyengine.** { *; }
+
+# AndroidX / AppCompat ke core classes safe rakhne ke liye (naye AGP/R8 ke saath extra safety)
+-keep class androidx.appcompat.** { *; }
+-dontwarn com.google.android.gms.**

@@ -24,6 +24,17 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Install required Android SDK components
+        run: |
+          # AGP 8.11 ko Platform 36 (compileSdk/targetSdk) aur Build-Tools 35+ chahiye.
+          # Runner image mein pehle se ho sakta hai, lekin explicitly install karna
+          # safe hai taaki build kabhi bhi "missing SDK component" pe fail na ho.
+          yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses > /dev/null || true
+          $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-36" \
+            "build-tools;36.0.0" \
+            "build-tools;35.0.0"
+
       - name: Make Gradle executable
         run: chmod +x gradlew
 
