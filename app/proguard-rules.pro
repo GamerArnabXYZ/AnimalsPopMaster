@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+# Google Play Services Ads ke liye rules
+-keep class com.google.android.gms.ads.** { *; }
+
+# Natty Engine ke liye rules (Reflection issues se bachne ke liye)
+-keep class com.github.nativegamestudio.nattyengine.** { *; }

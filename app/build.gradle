@@ -13,12 +13,37 @@ android {
         versionName "1.1"
     }
 
-    buildTypes {
+    // Yahan splits block add kiya gaya hai
+    splits {
+        abi {
+            // Separate APKs generate karna enable karega
+            enable true
+            
+            // Default list clear karke sirf niche diye gaye ABIs include karega
+            reset()
+            
+            // Aaj kal ke sabhi Android phones ke architectures
+            include "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+            
+            // True rakhne se ek 'Universal APK' bhi banega jisme sabhi architectures honge. 
+            // Agar aapko sirf separate APKs chahiye, toh isko 'false' kar sakte hain.
+            universalApk true 
+        }
+    }
+
+        buildTypes {
         release {
-            minifyEnabled false
+            // 1. Unused Java/Kotlin code aur libraries se faltu methods remove karta hai
+            minifyEnabled true
+
+            // 2. Unused images, layouts aur assets ko APK se delete karta hai
+            shrinkResources true
+
+            // 3. Normal proguard file ki jagah 'optimize' version use karein (Zyada compression ke liye)
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
