@@ -33,7 +33,7 @@
         android:id="@+id/txt_extra_move"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/baloo"
+        app:fontFamily="@font/baloo"
         android:gravity="center"
         android:text="@string/txt_ad_extra_moves"
         android:textColor="@color/brown"

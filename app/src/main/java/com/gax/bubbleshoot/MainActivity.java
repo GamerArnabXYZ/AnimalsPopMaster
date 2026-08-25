@@ -2,6 +2,8 @@ package com.gax.bubbleshoot;
 
 import android.os.Bundle;
 
+import androidx.core.splashscreen.SplashScreen;
+
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -48,8 +50,11 @@ public class MainActivity extends GameActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // Splash screen ko sabse pehle install karna hai -> super.onCreate() se bhi pehle.
+        // Splash khatam hote hi themes.xml ka "postSplashScreenTheme" khud
+        // Theme.AnimalsPop apply kar dega, isliye manual setTheme() ki zaroorat nahi.
+        SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
-        setTheme(R.style.Theme_AnimalsPop);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_main);
         setContainerId(R.id.container);

@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- core-splashscreen library ka apna minSdk 23 hai; humara app minSdk 21 hai
+         (purane device support ke liye). Override safe hai -> API 21-22 pe library
+         khud SDK_INT check karke gracefully kuch nahi karti, crash nahi hota. -->
+    <uses-sdk tools:overrideLibrary="androidx.core.splashscreen" />
 
     <application
         android:allowBackup="true"
@@ -7,7 +13,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SplashScreen">
+        android:theme="@style/Theme.App.Starting">
         <activity
             android:name="com.gax.bubbleshoot.MainActivity"
             android:exported="true"

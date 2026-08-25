@@ -13,9 +13,12 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <!-- Splash screen theme. -->
-    <style name="Theme.SplashScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowBackground">@color/black</item>
-        <item name="android:windowFullscreen">true</item>
+    <!-- Splash screen theme -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <!-- Game ka apna brand color (dialogs/buttons mein already use hota hai) -->
+        <item name="windowSplashScreenBackground">@color/brown</item>
+        <!-- Icon custom set nahi kiya -> launcher (fox adaptive icon) default use hoga -->
+        <!-- Splash khatam hote hi ye theme apply hoga, MainActivity ka manual setTheme() hataya -->
+        <item name="postSplashScreenTheme">@style/Theme.AnimalsPop</item>
     </style>
 </resources>

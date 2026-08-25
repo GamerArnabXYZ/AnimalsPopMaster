@@ -10,7 +10,7 @@
         android:id="@+id/txt_move"
         android:layout_width="@dimen/btn_switch_width"
         android:layout_height="@dimen/btn_switch_width"
-        android:fontFamily="@font/baloo"
+        app:fontFamily="@font/baloo"
         android:gravity="center"
         android:textColor="@color/white"
         android:textSize="@dimen/txt_switch_size"
