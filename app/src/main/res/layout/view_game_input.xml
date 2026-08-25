@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:layout_marginTop="@dimen/image_state_height">
 
-    <TextView
+    <com.gax.bubbleshoot.ui.view.GameTextView
         android:id="@+id/txt_move"
         android:layout_width="@dimen/btn_switch_width"
         android:layout_height="@dimen/btn_switch_width"

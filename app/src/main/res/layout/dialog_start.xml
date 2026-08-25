@@ -84,7 +84,7 @@
         app:layout_constraintStart_toStartOf="@id/image_field"
         app:layout_constraintTop_toTopOf="@+id/image_field" />
 
-    <TextView
+    <com.gax.bubbleshoot.ui.view.GameTextView
         android:id="@+id/txt_start_target"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
         app:layout_constraintEnd_toEndOf="@id/image_start_dialog"
         app:layout_constraintStart_toStartOf="@id/image_start_dialog" />
 
-    <TextView
+    <com.gax.bubbleshoot.ui.view.GameTextView
         android:id="@+id/txt_target"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

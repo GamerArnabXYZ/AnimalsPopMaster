@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:ignore="ContentDescription">
 
-    <TextView
+    <com.gax.bubbleshoot.ui.view.GameTextView
         android:id="@+id/txt_new_booster"
         android:layout_width="@dimen/dialog_width"
         android:layout_height="0dp"

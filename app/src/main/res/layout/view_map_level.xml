@@ -43,7 +43,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_previous"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -60,7 +60,7 @@
             app:layout_constraintTop_toTopOf="@id/image_map_01"
             app:layout_constraintVertical_bias="0.85" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_1"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -89,7 +89,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_1"
             app:layout_constraintTop_toTopOf="@id/btn_level_1" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_2"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -118,7 +118,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_2"
             app:layout_constraintTop_toTopOf="@id/btn_level_2" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_3"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -147,7 +147,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_3"
             app:layout_constraintTop_toTopOf="@id/btn_level_3" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_4"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -176,7 +176,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_4"
             app:layout_constraintTop_toTopOf="@id/btn_level_4" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_5"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -204,7 +204,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_5"
             app:layout_constraintTop_toTopOf="@id/btn_level_5" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_6"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -233,7 +233,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_6"
             app:layout_constraintTop_toTopOf="@id/btn_level_6" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_7"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -262,7 +262,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_7"
             app:layout_constraintTop_toTopOf="@id/btn_level_7" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_8"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -291,7 +291,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_8"
             app:layout_constraintTop_toTopOf="@id/btn_level_8" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_9"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -320,7 +320,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_9"
             app:layout_constraintTop_toTopOf="@id/btn_level_9" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_10"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -349,7 +349,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_10"
             app:layout_constraintTop_toTopOf="@id/btn_level_10" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_11"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -377,7 +377,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_11"
             app:layout_constraintTop_toTopOf="@id/btn_level_11" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_12"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -406,7 +406,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_12"
             app:layout_constraintTop_toTopOf="@id/btn_level_12" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_13"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -435,7 +435,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_13"
             app:layout_constraintTop_toTopOf="@id/btn_level_13" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_14"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -464,7 +464,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_14"
             app:layout_constraintTop_toTopOf="@id/btn_level_14" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_15"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -493,7 +493,7 @@
             app:layout_constraintStart_toStartOf="@id/btn_level_15"
             app:layout_constraintTop_toTopOf="@id/btn_level_15" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_next"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"

@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toStartOf="@+id/btn_shop"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/txt_lives"
             android:layout_width="@dimen/image_state_board_height"
             android:layout_height="@dimen/image_state_board_height"
@@ -32,7 +32,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/txt_lives_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/txt_coin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

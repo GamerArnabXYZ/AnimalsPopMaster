@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="@id/image_dialog"
         app:layout_constraintTop_toTopOf="@id/image_dialog" />
 
-    <TextView
+    <com.gax.bubbleshoot.ui.view.GameTextView
         android:id="@+id/txt_shop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
