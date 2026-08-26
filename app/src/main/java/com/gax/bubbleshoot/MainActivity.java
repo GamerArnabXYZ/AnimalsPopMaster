@@ -3,6 +3,7 @@ package com.gax.bubbleshoot;
 import android.os.Bundle;
 
 import androidx.core.splashscreen.SplashScreen;
+import androidx.core.view.WindowCompat;
 
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
@@ -55,6 +56,12 @@ public class MainActivity extends GameActivity {
         // Theme.AnimalsPop apply kar dega, isliye manual setTheme() ki zaroorat nahi.
         SplashScreen.installSplashScreen(this);
         super.onCreate(savedInstanceState);
+        // True edge-to-edge -> game ka background status/nav bar ke peeche bhi
+        // dikhega, bars khud transparent overlay ki tarah upar rahenge.
+        // WindowCompat API21-36 tak consistently kaam karta hai.
+        WindowCompat.setDecorFitsSystemWindows(getWindow(), false);
+        getWindow().setStatusBarColor(android.graphics.Color.TRANSPARENT);
+        getWindow().setNavigationBarColor(android.graphics.Color.TRANSPARENT);
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         setContentView(R.layout.activity_main);
         setContainerId(R.id.container);
@@ -89,6 +96,15 @@ public class MainActivity extends GameActivity {
 
     public LivesTimer getLivesTimer() {
         return mLivesTimer;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        // DatabaseHelper ab poori session ek hi connection use karta hai
+        // (repeated open/close hata diya, performance ke liye) -> isliye
+        // yahan ek hi baar properly close karna zaroori hai.
+        mDatabaseHelper.closeDatabase();
     }
 
 }

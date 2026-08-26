@@ -16,6 +16,7 @@ import com.gax.bubbleshoot.ui.UIEffect;
 import com.gax.bubbleshoot.ui.dialog.ExitDialog;
 import com.gax.bubbleshoot.ui.dialog.SettingDialog;
 import com.gax.bubbleshoot.sound.MySoundEvent;
+import com.gax.bubbleshoot.util.InsetUtils;
 import com.nativegame.nattyengine.ui.GameFragment;
 
 /**
@@ -46,6 +47,12 @@ public class MenuFragment extends GameFragment implements View.OnClickListener,
     }
 
     private void init() {
+        // Edge-to-edge: background full-bleed, sirf top logo aur bottom
+        // buttons ko status/nav bar se clear rakhte hain.
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.image_logo_bg));
+        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.btn_setting));
+        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.txt_version));
+
         // Init logo
         ImageView imageLogoBg = (ImageView) getView().findViewById(R.id.image_logo_bg);
         ImageView imageLogo = (ImageView) getView().findViewById(R.id.image_logo);

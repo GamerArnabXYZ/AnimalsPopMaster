@@ -10,6 +10,7 @@ import com.gax.bubbleshoot.R;
 import com.gax.bubbleshoot.game.MyGame;
 import com.gax.bubbleshoot.sound.MySoundEvent;
 import com.gax.bubbleshoot.ui.UIEffect;
+import com.gax.bubbleshoot.util.InsetUtils;
 import com.nativegame.nattyengine.Game;
 import com.nativegame.nattyengine.GameView;
 import com.nativegame.nattyengine.ui.GameFragment;
@@ -53,6 +54,13 @@ public class MyGameFragment extends GameFragment implements View.OnClickListener
 
     @Override
     protected void onLayoutCreated() {
+        // Edge-to-edge: background full-bleed rehta hai, sirf HUD bar (status
+        // bar), game_view (HUD ke neeche), aur booster buttons (nav bar) ko
+        // clear rakhte hain.
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.layout_state));
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.game_view));
+        InsetUtils.addBottomPaddingInset(getView().findViewById(R.id.layout_booster));
+
         // Init pause button
         ImageButton btnPause = (ImageButton) getGameActivity().findViewById(R.id.btn_pause);
         UIEffect.createButtonEffect(btnPause);

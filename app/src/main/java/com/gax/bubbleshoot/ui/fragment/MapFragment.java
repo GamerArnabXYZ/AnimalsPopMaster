@@ -25,6 +25,7 @@ import com.gax.bubbleshoot.ui.dialog.WheelDialog;
 import com.gax.bubbleshoot.sound.MySoundEvent;
 import com.gax.bubbleshoot.timer.LivesTimer;
 import com.gax.bubbleshoot.timer.WheelTimer;
+import com.gax.bubbleshoot.util.InsetUtils;
 import com.nativegame.nattyengine.ui.GameFragment;
 
 import java.util.ArrayList;
@@ -83,6 +84,13 @@ public class MapFragment extends GameFragment implements View.OnClickListener,
     }
 
     private void init() {
+        // Edge-to-edge: background full-bleed, top state bar aur bottom ad
+        // banner ko status/nav bar se clear rakhte hain (btn_setting adView
+        // ke top se constrained hai, isliye wo automatically follow karega).
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.layout_map_state));
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.btn_wheel));
+        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.adView));
+
         // Init button
         ImageButton btnSetting = (ImageButton) getView().findViewById(R.id.btn_setting);
         ImageButton btnShop = (ImageButton) getView().findViewById(R.id.btn_shop);

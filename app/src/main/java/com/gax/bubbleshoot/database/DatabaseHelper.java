@@ -100,9 +100,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 ITEM_COLUMN_NAME + " = ? ",
                 new String[]{name});
 
-        // Close db connection
-        db.close();
-
         if (id == -1) {
             return false;
         }
@@ -124,9 +121,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             number = cursor.getInt(0);
         }
 
-        // close the db connection
+        // close the cursor (db connection khud persist rehta hai, ek hi
+        // baar Activity ke onDestroy me close hota hai)
         cursor.close();
-        db.close();
 
         return number;
     }
@@ -145,9 +142,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         // Insert row
         long id = db.insert(STAR_TABLE_NAME, null, values);
-
-        // Close db connection
-        db.close();
 
         if (id == -1) {
             return false;
@@ -188,9 +182,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             star = cursor.getInt(0);
         }
 
-        // Close db connection
+        // Close cursor (db connection persist rehta hai)
         cursor.close();
-        db.close();
 
         return star;
     }
@@ -212,12 +205,22 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-        // Close db connection
+        // Close cursor (db connection persist rehta hai)
         cursor.close();
-        db.close();
 
         return stars;
     }
     //===========================================================
+
+    /**
+     * MainActivity ke onDestroy() me ek hi baar call karo -> DB connection
+     * jo saari session me open reh rahi thi, ab properly release ho jayegi.
+     */
+    public void closeDatabase() {
+        SQLiteDatabase db = getWritableDatabase();
+        if (db.isOpen()) {
+            db.close();
+        }
+    }
 
 }
