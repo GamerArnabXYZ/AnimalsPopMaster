@@ -51,7 +51,7 @@ public class MenuFragment extends GameFragment implements View.OnClickListener,
         // buttons ko status/nav bar se clear rakhte hain.
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.image_logo_bg));
         InsetUtils.addBottomMarginInset(getView().findViewById(R.id.btn_setting));
-        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.txt_version));
+        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.txt_credit));
 
         // Init logo
         ImageView imageLogoBg = (ImageView) getView().findViewById(R.id.image_logo_bg);

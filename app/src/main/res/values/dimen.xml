@@ -11,6 +11,7 @@
     <dimen name="txt_tutorial_size">22sp</dimen>
     <dimen name="txt_lives_size">25sp</dimen>
     <dimen name="txt_product_name_size">15sp</dimen>
+    <dimen name="txt_footer_size">11sp</dimen>
 
     <!-- Button width -->
     <dimen name="btn_width">160dp</dimen>
