@@ -1,10 +1,9 @@
 package com.gax.bubbleshoot.leveleditor;
 
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -30,9 +29,12 @@ public class GridCellAdapter extends RecyclerView.Adapter<GridCellAdapter.CellVi
     @Override
     public void onBindViewHolder(@NonNull CellViewHolder holder, int position) {
         EditorCell cell = mCells[position];
-        holder.txtCell.setText(cell.label);
-        holder.txtCell.setBackgroundColor(Color.parseColor(cell.colorHex));
-        holder.txtCell.setOnClickListener(v -> {
+        if (cell.drawableRes != 0) {
+            holder.imgCell.setImageResource(cell.drawableRes);
+        } else {
+            holder.imgCell.setImageDrawable(null);
+        }
+        holder.imgCell.setOnClickListener(v -> {
             mCells[position] = cell.next();
             notifyItemChanged(position);
         });
@@ -44,11 +46,11 @@ public class GridCellAdapter extends RecyclerView.Adapter<GridCellAdapter.CellVi
     }
 
     public static class CellViewHolder extends RecyclerView.ViewHolder {
-        final TextView txtCell;
+        final ImageView imgCell;
 
         public CellViewHolder(@NonNull View itemView) {
             super(itemView);
-            txtCell = (TextView) itemView;
+            imgCell = (ImageView) itemView;
         }
     }
 }

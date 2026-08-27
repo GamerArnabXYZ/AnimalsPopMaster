@@ -11,8 +11,10 @@ import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.gax.bubbleshoot.BuildConfig;
 import com.gax.bubbleshoot.MainActivity;
 import com.gax.bubbleshoot.item.Item;
+import com.gax.bubbleshoot.leveleditor.LevelEditorActivity;
 import com.gax.bubbleshoot.ui.TransitionEffect;
 import com.gax.bubbleshoot.R;
 import com.gax.bubbleshoot.ui.UIEffect;
@@ -37,7 +39,7 @@ import java.util.ArrayList;
 public class MapFragment extends GameFragment implements View.OnClickListener,
         TransitionEffect.OnTransitionListener {
 
-    private static final int TOTAL_LEVEL = 20;
+    private static final int TOTAL_LEVEL = 15;
 
     private DatabaseHelper mDatabaseHelper;
     private LivesTimer mLivesTimer;
@@ -90,6 +92,15 @@ public class MapFragment extends GameFragment implements View.OnClickListener,
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.layout_map_state));
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.btn_wheel));
         InsetUtils.addBottomMarginInset(getView().findViewById(R.id.adView));
+        InsetUtils.addBottomMarginInset(getView().findViewById(R.id.btn_add_level));
+
+        // Debug-only: naya level design karne ke liye "+" button
+        ImageButton btnAddLevel = getView().findViewById(R.id.btn_add_level);
+        if (BuildConfig.DEBUG) {
+            btnAddLevel.setVisibility(View.VISIBLE);
+            btnAddLevel.setOnClickListener(v ->
+                    LevelEditorActivity.startCreate(getGameActivity(), TOTAL_LEVEL + 1));
+        }
 
         // Init button
         ImageButton btnSetting = (ImageButton) getView().findViewById(R.id.btn_setting);

@@ -32,6 +32,20 @@
         app:layout_constraintBottom_toTopOf="@id/adView"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Debug-only: naya level design karne ke liye. Java mein
+         BuildConfig.DEBUG check karke GONE/VISIBLE set hota hai. -->
+    <ImageButton
+        android:id="@+id/btn_add_level"
+        android:layout_width="@dimen/btn_round_width"
+        android:layout_height="@dimen/btn_round_width"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/btn_level"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_input_add"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/adView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
     <com.google.android.gms.ads.AdView
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"

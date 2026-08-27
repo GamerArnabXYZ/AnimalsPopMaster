@@ -39,6 +39,20 @@
 
     <include layout="@layout/view_game_state" />
 
+    <!-- Debug-only: current level ko edit karne ke liye. Java mein
+         BuildConfig.DEBUG check karke GONE/VISIBLE set hota hai. -->
+    <ImageButton
+        android:id="@+id/btn_edit_level"
+        android:layout_width="@dimen/btn_round_width"
+        android:layout_height="@dimen/btn_round_width"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@drawable/btn_setting"
+        android:padding="8dp"
+        android:src="@android:drawable/ic_menu_edit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <include layout="@layout/view_game_input" />
 
     <include layout="@layout/view_game_booster" />

@@ -6,8 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 
+import com.gax.bubbleshoot.BuildConfig;
 import com.gax.bubbleshoot.R;
 import com.gax.bubbleshoot.game.MyGame;
+import com.gax.bubbleshoot.leveleditor.LevelEditorActivity;
 import com.gax.bubbleshoot.sound.MySoundEvent;
 import com.gax.bubbleshoot.ui.UIEffect;
 import com.gax.bubbleshoot.util.InsetUtils;
@@ -60,6 +62,15 @@ public class MyGameFragment extends GameFragment implements View.OnClickListener
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.layout_state));
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.game_view));
         InsetUtils.addBottomPaddingInset(getView().findViewById(R.id.layout_booster));
+        InsetUtils.addTopMarginInset(getView().findViewById(R.id.btn_edit_level));
+
+        // Debug-only: is level ko edit karne ke liye pencil icon
+        ImageButton btnEditLevel = getView().findViewById(R.id.btn_edit_level);
+        if (BuildConfig.DEBUG) {
+            btnEditLevel.setVisibility(View.VISIBLE);
+            btnEditLevel.setOnClickListener(v ->
+                    LevelEditorActivity.startEdit(getGameActivity(), mLevel));
+        }
 
         // Init pause button
         ImageButton btnPause = (ImageButton) getGameActivity().findViewById(R.id.btn_pause);

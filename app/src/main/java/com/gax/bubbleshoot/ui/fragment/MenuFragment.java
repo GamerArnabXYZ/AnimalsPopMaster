@@ -1,6 +1,5 @@
 package com.gax.bubbleshoot.ui.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,10 +10,8 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
-import com.gax.bubbleshoot.BuildConfig;
 import com.gax.bubbleshoot.ui.TransitionEffect;
 import com.gax.bubbleshoot.R;
-import com.gax.bubbleshoot.leveleditor.LevelEditorActivity;
 import com.gax.bubbleshoot.ui.UIEffect;
 import com.gax.bubbleshoot.ui.dialog.ExitDialog;
 import com.gax.bubbleshoot.ui.dialog.SettingDialog;
@@ -55,31 +52,6 @@ public class MenuFragment extends GameFragment implements View.OnClickListener,
         InsetUtils.addTopMarginInset(getView().findViewById(R.id.image_logo_bg));
         InsetUtils.addBottomMarginInset(getView().findViewById(R.id.txt_version));
         InsetUtils.addBottomMarginInset(getView().findViewById(R.id.txt_credit));
-
-        // Debug-only: "By GamerArnabXYZ" credit text ko 3 second tak dabaye
-        // rakho -> Level Editor khulega. Release build mein BuildConfig.DEBUG
-        // false hota hai, isliye ye poora block kabhi wire hi nahi hota.
-        if (BuildConfig.DEBUG) {
-            View txtCredit = getView().findViewById(R.id.txt_credit);
-            android.os.Handler holdHandler = new android.os.Handler(android.os.Looper.getMainLooper());
-            Runnable openEditor = () -> {
-                if (isAdded()) {
-                    startActivity(new Intent(getGameActivity(), LevelEditorActivity.class));
-                }
-            };
-            txtCredit.setOnTouchListener((v, event) -> {
-                switch (event.getAction()) {
-                    case android.view.MotionEvent.ACTION_DOWN:
-                        holdHandler.postDelayed(openEditor, 3000);
-                        return true;
-                    case android.view.MotionEvent.ACTION_UP:
-                    case android.view.MotionEvent.ACTION_CANCEL:
-                        holdHandler.removeCallbacks(openEditor);
-                        return true;
-                }
-                return false;
-            });
-        }
 
         // Init logo
         ImageView imageLogoBg = (ImageView) getView().findViewById(R.id.image_logo_bg);
