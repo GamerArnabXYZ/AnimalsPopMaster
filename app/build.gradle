@@ -52,6 +52,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    // AGP 8.0+ mein BuildConfig generation default OFF hai (pehle automatic
+    // tha) - MenuFragment mein BuildConfig.DEBUG use hota hai (Level Editor
+    // ka debug-only trigger), isliye explicitly enable karna zaroori hai.
+    buildFeatures {
+        buildConfig true
+    }
+
     // Naye dependencies (esp. play-services-ads) META-INF license/notice files
     // duplicate kar dete hain -> yeh unhe silently exclude karta hai taaki
     // packaging step fail na ho
