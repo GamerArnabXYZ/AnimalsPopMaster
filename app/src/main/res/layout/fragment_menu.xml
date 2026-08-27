@@ -71,7 +71,7 @@
         android:layout_height="@dimen/btn_round_width"
         android:layout_margin="@dimen/margin_10"
         android:background="@drawable/btn_setting"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txt_version"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.gax.bubbleshoot.ui.view.GameTextView
@@ -79,14 +79,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_10"
-        android:layout_marginBottom="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_10"
         app:fontFamily="@font/baloo"
         android:gravity="start"
         android:text="@string/app_version"
         android:textColor="@color/white"
         android:textSize="@dimen/txt_footer_size"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@id/btn_setting"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.gax.bubbleshoot.ui.view.GameTextView

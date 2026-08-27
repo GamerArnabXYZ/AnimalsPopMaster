@@ -25,6 +25,12 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name="com.gax.bubbleshoot.leveleditor.LevelEditorActivity"
+            android:exported="false"
+            android:label="Level Editor (Debug)"
+            android:theme="@style/Theme.AnimalsPop" />
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3940256099942544~3347511713" />
