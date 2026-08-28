@@ -8,9 +8,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import com.gax.bubbleshoot.R;
 
 import java.io.BufferedReader;
@@ -50,8 +47,7 @@ public class LevelEditorActivity extends Activity {
     private static final int COLUMN = 11;
 
     private EditorCell[] mCells;
-    private GridCellAdapter mAdapter;
-    private RecyclerView mRecyclerGrid;
+    private HexGridLayout mHexGrid;
 
     /** Map screen ke "+" button se call karo -> blank naya level. */
     public static void startCreate(Context context, int suggestedLevelNum) {
@@ -74,9 +70,7 @@ public class LevelEditorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level_editor);
 
-        mRecyclerGrid = findViewById(R.id.recycler_grid);
-        mRecyclerGrid.setLayoutManager(new GridLayoutManager(this, COLUMN));
-        mRecyclerGrid.setNestedScrollingEnabled(false);
+        mHexGrid = findViewById(R.id.hex_grid);
 
         String mode = getIntent().getStringExtra(EXTRA_MODE);
         int levelNum = getIntent().getIntExtra(EXTRA_LEVEL_NUM, 21);
@@ -108,8 +102,7 @@ public class LevelEditorActivity extends Activity {
         for (int i = 0; i < mCells.length; i++) {
             mCells[i] = EditorCell.EMPTY;
         }
-        mAdapter = new GridCellAdapter(mCells);
-        mRecyclerGrid.setAdapter(mAdapter);
+        mHexGrid.rebuild(mCells, () -> { });
     }
 
     private void populateFrom(LevelData data) {
@@ -124,8 +117,7 @@ public class LevelEditorActivity extends Activity {
         for (int i = 0; i < mCells.length; i++) {
             mCells[i] = EditorCell.fromCode(data.bubble.charAt(i));
         }
-        mAdapter = new GridCellAdapter(mCells);
-        mRecyclerGrid.setAdapter(mAdapter);
+        mHexGrid.rebuild(mCells, () -> { });
     }
 
     /** data.xml (assets) se ek level ka raw data nikalta hai - simple regex based, XML format khud predictable hai. */

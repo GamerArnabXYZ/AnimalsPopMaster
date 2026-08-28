@@ -39,7 +39,7 @@ import java.util.ArrayList;
 public class MapFragment extends GameFragment implements View.OnClickListener,
         TransitionEffect.OnTransitionListener {
 
-    private static final int TOTAL_LEVEL = 15;
+    private static final int TOTAL_LEVEL = 20;
 
     private DatabaseHelper mDatabaseHelper;
     private LivesTimer mLivesTimer;
@@ -152,7 +152,11 @@ public class MapFragment extends GameFragment implements View.OnClickListener,
             TextView txtLevel = (TextView) findViewByName("btn_level_" + i);
 
             // Init button listener
-            if (i <= mCurrentLevel) {
+            // BuildConfig.DEBUG mein har level tap-able hai (progress ki
+            // parwah nahi) - testing/level-design ke liye. Star/completion
+            // display (initLevelStar neeche) ispe asar nahi karta, wo hamesha
+            // real progress hi dikhata hai.
+            if (i <= mCurrentLevel || BuildConfig.DEBUG) {
                 int level = i;
                 txtLevel.setOnClickListener(new View.OnClickListener() {
                     @Override

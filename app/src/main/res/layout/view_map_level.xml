@@ -34,6 +34,16 @@
             app:layout_constraintStart_toStartOf="parent" />
 
         <ImageView
+            android:id="@+id/image_map_04"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/map_02"
+            app:layout_constraintBottom_toTopOf="@id/image_map_03"
+            app:layout_constraintDimensionRatio="7:8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
             android:id="@+id/image_map_03"
             android:layout_width="0dp"
             android:layout_height="0dp"
@@ -494,6 +504,151 @@
             app:layout_constraintTop_toTopOf="@id/btn_level_15" />
 
         <com.gax.bubbleshoot.ui.view.GameTextView
+            android:id="@+id/btn_level_16"
+            android:layout_width="@dimen/btn_level_width"
+            android:layout_height="@dimen/btn_level_width"
+            android:background="@drawable/btn_level"
+            app:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="16"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/txt_level_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.56"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.95" />
+
+        <ImageView
+            android:id="@+id/image_level_star_16"
+            android:layout_width="@dimen/image_level_star_width"
+            android:layout_height="0dp"
+            android:src="@drawable/star_set_bg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_level_16"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@id/btn_level_16"
+            app:layout_constraintStart_toStartOf="@id/btn_level_16"
+            app:layout_constraintTop_toTopOf="@id/btn_level_16" />
+
+        <com.gax.bubbleshoot.ui.view.GameTextView
+            android:id="@+id/btn_level_17"
+            android:layout_width="@dimen/btn_level_width"
+            android:layout_height="@dimen/btn_level_width"
+            android:background="@drawable/btn_level"
+            app:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="17"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/txt_level_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.64"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.88" />
+
+        <ImageView
+            android:id="@+id/image_level_star_17"
+            android:layout_width="@dimen/image_level_star_width"
+            android:layout_height="0dp"
+            android:src="@drawable/star_set_bg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_level_17"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@id/btn_level_17"
+            app:layout_constraintStart_toStartOf="@id/btn_level_17"
+            app:layout_constraintTop_toTopOf="@id/btn_level_17" />
+
+        <com.gax.bubbleshoot.ui.view.GameTextView
+            android:id="@+id/btn_level_18"
+            android:layout_width="@dimen/btn_level_width"
+            android:layout_height="@dimen/btn_level_width"
+            android:background="@drawable/btn_level"
+            app:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="18"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/txt_level_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.81"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.72" />
+
+        <ImageView
+            android:id="@+id/image_level_star_18"
+            android:layout_width="@dimen/image_level_star_width"
+            android:layout_height="0dp"
+            android:src="@drawable/star_set_bg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_level_18"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@id/btn_level_18"
+            app:layout_constraintStart_toStartOf="@id/btn_level_18"
+            app:layout_constraintTop_toTopOf="@id/btn_level_18" />
+
+        <com.gax.bubbleshoot.ui.view.GameTextView
+            android:id="@+id/btn_level_19"
+            android:layout_width="@dimen/btn_level_width"
+            android:layout_height="@dimen/btn_level_width"
+            android:background="@drawable/btn_level"
+            app:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="19"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/txt_level_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.80"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.50" />
+
+        <ImageView
+            android:id="@+id/image_level_star_19"
+            android:layout_width="@dimen/image_level_star_width"
+            android:layout_height="0dp"
+            android:src="@drawable/star_set_bg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_level_19"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@id/btn_level_19"
+            app:layout_constraintStart_toStartOf="@id/btn_level_19"
+            app:layout_constraintTop_toTopOf="@id/btn_level_19" />
+
+        <com.gax.bubbleshoot.ui.view.GameTextView
+            android:id="@+id/btn_level_20"
+            android:layout_width="@dimen/btn_level_width"
+            android:layout_height="@dimen/btn_level_width"
+            android:background="@drawable/btn_level"
+            app:fontFamily="@font/baloo"
+            android:gravity="center"
+            android:text="20"
+            android:textColor="@color/brown"
+            android:textSize="@dimen/txt_level_size"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.60"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.33" />
+
+        <ImageView
+            android:id="@+id/image_level_star_20"
+            android:layout_width="@dimen/image_level_star_width"
+            android:layout_height="0dp"
+            android:src="@drawable/star_set_bg"
+            app:layout_constraintBottom_toTopOf="@+id/btn_level_20"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="@id/btn_level_20"
+            app:layout_constraintStart_toStartOf="@id/btn_level_20"
+            app:layout_constraintTop_toTopOf="@id/btn_level_20" />
+
+        <com.gax.bubbleshoot.ui.view.GameTextView
             android:id="@+id/btn_level_next"
             android:layout_width="@dimen/btn_level_width"
             android:layout_height="@dimen/btn_level_width"
@@ -503,12 +658,12 @@
             android:textColor="@color/brown"
             android:textSize="@dimen/txt_dialog_size"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@id/image_map_03"
+            app:layout_constraintBottom_toBottomOf="@id/image_map_04"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.68"
+            app:layout_constraintHorizontal_bias="0.47"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@id/image_map_03"
-            app:layout_constraintVertical_bias="0.15" />
+            app:layout_constraintTop_toTopOf="@id/image_map_04"
+            app:layout_constraintVertical_bias="0.13" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

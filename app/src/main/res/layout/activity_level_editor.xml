@@ -9,132 +9,129 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="12dp">
+        android:padding="10dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Level Editor (Debug)"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Legend: R/Y/B/G=color, R🔒 etc=locked, OB=obstacle(small), OB+=obstacle(large), IT=item(small), IT+=item(large), +=dummy, tap empty cell for blank"
-            android:textColor="#AAAAAA"
-            android:textSize="11sp" />
-
-        <!-- Row 1: level number + level type -->
+        <!-- Semi-transparent panel - gameplay background busy hai, isse
+             controls readable rehte hain bina background hide kiye -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="horizontal">
+            android:background="@drawable/board_state"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <EditText
-                android:id="@+id/edit_level_num"
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Level #"
-                android:inputType="number"
-                android:text="21"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#888888" />
+                android:text="Level Editor (Debug)"
+                android:textColor="@color/brown"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/edit_level_type"
-                android:layout_width="0dp"
+            <TextView
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:hint="pop or collect"
-                android:text="pop"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#888888" />
-        </LinearLayout>
+                android:layout_marginTop="4dp"
+                android:text="Tap a bubble to cycle: empty → colors → locked → obstacle → item → dummy"
+                android:textColor="@color/brown"
+                android:textSize="10sp" />
 
-        <!-- Row 2: target + moves -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/edit_target"
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Target"
-                android:inputType="number"
-                android:text="50"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#888888" />
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/edit_moves"
-                android:layout_width="0dp"
+                <EditText
+                    android:id="@+id/edit_level_num"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Level #"
+                    android:inputType="number"
+                    android:text="21" />
+
+                <EditText
+                    android:id="@+id/edit_level_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="pop/collect"
+                    android:text="pop" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_weight="1"
-                android:hint="Moves"
-                android:inputType="number"
-                android:text="40"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#888888" />
-        </LinearLayout>
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
 
-        <!-- Row 3: rows + generate grid -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/edit_target"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Target"
+                    android:inputType="number"
+                    android:text="50" />
 
-            <EditText
-                android:id="@+id/edit_rows"
-                android:layout_width="0dp"
+                <EditText
+                    android:id="@+id/edit_moves"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"
+                    android:hint="Moves"
+                    android:inputType="number"
+                    android:text="40" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:hint="Rows (columns fixed=11)"
-                android:inputType="number"
-                android:text="10"
-                android:textColor="#FFFFFF"
-                android:textColorHint="#888888" />
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_rows"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Rows"
+                    android:inputType="number"
+                    android:text="10" />
+
+                <Button
+                    android:id="@+id/btn_generate_grid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="New Grid" />
+            </LinearLayout>
 
             <Button
-                android:id="@+id/btn_generate_grid"
-                android:layout_width="wrap_content"
+                android:id="@+id/btn_save_level"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:text="New Grid" />
+                android:layout_marginTop="10dp"
+                android:text="Save Level File" />
+
+            <TextView
+                android:id="@+id/txt_save_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/brown"
+                android:textSize="11sp" />
         </LinearLayout>
 
-        <!-- The tappable grid -->
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_grid"
+        <!-- Asli gameplay jaisa hex-packed grid -->
+        <com.gax.bubbleshoot.leveleditor.HexGridLayout
+            android:id="@+id/hex_grid"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp" />
-
-        <Button
-            android:id="@+id/btn_save_level"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Save Level File" />
-
-        <TextView
-            android:id="@+id/txt_save_result"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#4CAF50"
-            android:textSize="12sp" />
+            android:layout_marginTop="14dp" />
 
     </LinearLayout>
 </ScrollView>
