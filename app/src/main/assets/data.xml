@@ -391,88 +391,88 @@
     </level15>
     <level16>
         <level_type>pop</level_type>
-        <target>67</target>
-        <player>grryyybbgryygrryyyrgygbrgggggryryrygygyyggbbrygbbbrb</player>
+        <target>65</target>
+        <player>ggbyyrgbgyrgggggbrbyrryybgygggyrrrrbggybgrbgggyrgygg</player>
         <bubble>
-            00rrbrrbY00
-            0bygrygyyr0
-            rrbyrggygyb
-            rbygrggygby
-            brbyyrgrbyy
-            bbggyrbgrgr
-            rgbrgrbbgrg
-            0bggbbgrrb0
-            00ogrbrbg00
+            00yrRryGy00
+            0gRrgYYyby0
+            yrygggyybbb
+            rgbgrbbgRgr
+            BggboygBygg
+            bgbbgyyyoyr
+            bbrgggRgbro
+            0rrYybgggb0
+            00rbyybrb00
         </bubble>
     </level16>
     <level17>
         <level_type>pop</level_type>
-        <target>72</target>
-        <player>ygbbyyrbggggrgbybgrrybbygyggygyrgyggygyrybrygrryrryyyrg</player>
+        <target>74</target>
+        <player>ggrbgyrbybgbbrryryygyrgrryrybrgrgrbyybrggrggbgbyybrgbby</player>
         <bubble>
-            00ggYRrgb00
-            0ybrrbyrgr0
-            ygygbbOryby
-            ygyrgBbbyob
-            rbrgrbygbrg
-            ygybryOgyro
-            yBbgrygOggg
-            rbbbygbgbbr
-            0yryygybgb0
-            00ybgyrGg00
+            00gryrgyg00
+            0byoryyyoy0
+            bgrbgyryygr
+            bgrrbRrrygg
+            ybyygrgByby
+            yrgyggyrrgr
+            bryrBYybgry
+            rrbYRbgbryy
+            0ybyyrroyy0
+            00rggbyyb00
         </bubble>
     </level17>
     <level18>
         <level_type>pop</level_type>
-        <target>75</target>
-        <player>ygybybrgrgbyrrbrybyryygrrygbgrrrryrrgbggyyyyybybgbbrrbgbrg</player>
+        <target>73</target>
+        <player>yggggrrrbbgbbgybrgrgbyrybbrrbbyrbryygbgyrrgbyrybyybgrryybr</player>
         <bubble>
-            00grbgygb00
-            0gyyggggbG0
-            yGygggbBrrY
-            rrbbrbgrOgg
-            brygbGrryyy
-            rbgybrygbyy
-            ybbryrbrybb
-            gyybbbbbbgy
-            0brBrybyry0
-            00yRgrbbg00
+            00yryRbgr00
+            0yrrrrgryy0
+            ggByYbyoBrg
+            bgyrrrggyRb
+            ybbgyogygbo
+            gybrrgrrbyb
+            bbggyrgybyg
+            bbygyGggyyr
+            0bygybgbyY0
+            00gbrgggo00
         </bubble>
     </level18>
     <level19>
         <level_type>pop</level_type>
-        <target>80</target>
-        <player>rgrbbygbryyrybyybybybgybbbybbrrrgrrbyygbbbbgbgbgybryrygygbry</player>
+        <target>79</target>
+        <player>ggyrbrrgygygyrrbbgrbybrybgryggrrggyrgygbgrgryggrrybyrrbgrbgr</player>
         <bubble>
-            00bryggyy00
-            0Ybgbygbby0
-            ybrgbYyORry
-            bgrybggggyg
-            rybybrrbygy
-            Ogbbbyybgyb
-            gobrRbYgoyb
-            grbgyyObyby
-            gyrbybbbOgr
-            0rygrRybBy0
-            00gyygggy00
+            00ryyybGy00
+            0ryryrgbrb0
+            gogbrobrybg
+            GgbgogRrrbb
+            rbboroggggy
+            yobybgrgyrb
+            grrggyyrbbb
+            yyygyyrrGyb
+            BrybybrBbrb
+            0oybbbRgRy0
+            00rggbrbr00
         </bubble>
     </level19>
     <level20>
         <level_type>pop</level_type>
-        <target>82</target>
-        <player>rrgrgbybbbgbgygyyybgbyryryybgrbybgbrgbrbbgygggrbrbgbbygygbrbyyb</player>
+        <target>81</target>
+        <player>brgrrrgyrrrbbbbrbygggrgggrrrrggbgbyrrgryyryybyygbgbryygybbrgrgr</player>
         <bubble>
-            00grbrgrb00
-            0ggbgbrrgr0
-            rrGbYrgyryy
-            rYBbyyyrggg
-            gbygyRRyRbr
-            bggyrrBBggb
-            rgryrbrrryb
-            bRgobygGGyg
-            YrBryYgrrob
-            0brOgbyGby0
-            00ybYygrY00
+            00rgbbgbg00
+            0rggggrGgr0
+            YBrGyoRgyyB
+            bbggbyrgbgb
+            Rbgrgbbbryr
+            bbrbgbyroor
+            ybygrygYbbr
+            bggrRyroyyg
+            yrrgrggGrrB
+            0bgbyRyybg0
+            00ygrgybg00
         </bubble>
     </level20>
 </level>

@@ -11,6 +11,8 @@ import com.google.android.gms.ads.rewarded.RewardItem;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
 
+import com.gax.bubbleshoot.util.FileLogger;
+
 /**
  * Created by Oscar Liang on 2022/09/18
  */
@@ -35,13 +37,13 @@ public class AdManager {
                     @Override
                     public void onAdFailedToLoad(LoadAdError loadAdError) {
                         // Handle the error
-                        // Toast.makeText(mActivity, "Fail!!!", Toast.LENGTH_SHORT).show();
+                        FileLogger.d("AdManager", "Reward ad failed to load: " + loadAdError.getMessage());
                         mRewardedAd = null;
                     }
 
                     @Override
                     public void onAdLoaded(RewardedAd rewardedAd) {
-                        // Toast.makeText(mActivity, "Succeed!!!", Toast.LENGTH_SHORT).show();
+                        FileLogger.d("AdManager", "Reward ad loaded successfully.");
                         mRewardedAd = rewardedAd;
                     }
                 });
@@ -59,19 +61,19 @@ public class AdManager {
             @Override
             public void onAdShowedFullScreenContent() {
                 // Called when ad is shown
-                // Log.d(TAG, "Ad was shown.");
+                FileLogger.d("AdManager", "Reward ad was shown.");
             }
 
             @Override
             public void onAdFailedToShowFullScreenContent(AdError adError) {
                 // Called when ad fails to show
-                // Log.d(TAG, "Ad failed to show.");
+                FileLogger.d("AdManager", "Reward ad failed to show: " + adError.getMessage());
             }
 
             @Override
             public void onAdDismissedFullScreenContent() {
                 // Called when ad is dismissed
-                // Log.d(TAG, "Ad was dismissed.");
+                FileLogger.d("AdManager", "Reward ad was dismissed.");
                 mRewardedAd = null;
                 // Check if user dismiss Ad before earn
                 if (!mRewardEarned) {

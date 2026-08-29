@@ -1,6 +1,7 @@
 package com.gax.bubbleshoot.leveleditor;
 
 import android.content.Context;
+import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -21,6 +22,10 @@ public class HexGridLayout extends ViewGroup {
 
     public HexGridLayout(Context context) {
         super(context);
+    }
+
+    public HexGridLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
     }
 
     @Override
